@@ -5,6 +5,12 @@ const getCharacters = async () => {
   return jsonRes.results;
 };
 
+const toggleMoreInformation = (id) => {
+  console.log("toggle called", id);
+  const infoDiv = document.getElementById(id);
+  infoDiv.classList.toggle("active");
+};
+
 
 const createHomeage = async () => {
   const characters = await getCharacters();

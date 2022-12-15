@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.characters, .search-results {
+    margin-top: 100px;
+}
+.character {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-bottom: 1px solid gray;
+}
+
+.character .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.character .heading p {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.character h1 {
+    font-size: 20px;
+}
+
+.more-info {
+    display: none;
+}
+
+.more-info.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

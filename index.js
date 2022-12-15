@@ -11,7 +11,6 @@ const toggleMoreInformation = (id) => {
   infoDiv.classList.toggle("active");
 };
 
-
 const createHomeage = async () => {
   const characters = await getCharacters();
   const charactersContainer = document.querySelector(".characters");

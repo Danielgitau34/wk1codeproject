@@ -64,3 +64,17 @@ const createCharacterList = async (data, container) => {
 };
 
 createHomeage();
+
+const findCharacter = async () => {
+  const inputValue = document.getElementById("seachInput").value;
+  const response = await fetch(
+    `https://rickandmortyapi.com/api/character/?name=${inputValue}&status=alive`
+  );
+  const jsonRes = await response.json();
+  console.log(jsonRes);
+  const searchResults = document.querySelector(".search-results");
+  document.querySelector(".search-results").innerHTML = "";
+  createCharacterList(jsonRes.results, searchResults);
+};
+const searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", findCharacter);

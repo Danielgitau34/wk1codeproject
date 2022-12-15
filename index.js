@@ -78,3 +78,10 @@ const findCharacter = async () => {
 };
 const searchBtn = document.getElementById("searchBtn");
 searchBtn.addEventListener("click", findCharacter);
+
+const clearSearch = document.querySelector("#clearSearch");
+clearSearch.addEventListener("click", () => {
+  console.log("clear called");
+  document.querySelector(".search-results").innerHTML = "";
+  document.getElementById("seachInput").value = "";
+});
